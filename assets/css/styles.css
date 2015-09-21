@@ -1,0 +1,616 @@
+@font-face {
+    font-family: 'tt_masters_demo_blackregular';
+    src: url('../fonts/tt-masters-demo.mastersdemoblack-webfont.eot');
+    src: url('../fonts/tt-masters-demo.mastersdemoblack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tt-masters-demo.mastersdemoblack-webfont.woff2') format('woff2'),
+         url('../fonts/tt-masters-demo.mastersdemoblack-webfont.woff') format('woff'),
+         url('../fonts/tt-masters-demo.mastersdemoblack-webfont.ttf') format('truetype'),
+         url('../fonts/tt-masters-demo.mastersdemoblack-webfont.svg#tt_masters_demo_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'NokiaSansS60-Regular';
+  src: url('../fonts/NokiaSansS60-Regular.eot');
+  src: url('../fonts/NokiaSansS60-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NokiaSansS60-Regular.woff2') format('woff2'),
+       url('../fonts/NokiaSansS60-Regular.woff') format('woff'),
+       url('../fonts/NokiaSansS60-Regular.ttf') format('truetype'),
+       url('../fonts/NokiaSansS60-Regular.svg#NokiaSansS60-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    background-color: #49c5db;
+}
+
+
+/*=== Header intro ===*/
+
+.logo_img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.intro_wr {
+    border: 1px solid green;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+
+.right_wreath {
+    display: inline-block;
+    border: 1px solid black;
+    margin-left: 20px;
+    width:103px;
+    height: 202px;
+}
+.left_wreath {
+    display: inline-block;
+    border: 1px solid black;
+     width: 103px;
+    height: 202px;
+   
+}
+.txt_after_logo {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid red;
+    text-align: center;
+    color: white;
+    width: 460px;
+    margin-left: 20px;
+}
+.txt_after_logo > h1 {
+    font-size: 22px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.txt_after_logo  > h3 {
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 0;
+}
+.date {
+  font-size: 34px;
+  font-family: "tt_masters_demo_blackregular";
+  color: rgb( 8, 95, 114 );
+
+}
+
+.date span {
+    font-size: 25px;
+}
+.invite_txt {
+        font-size: 12px;
+        font-family: 'NokiaSansS60-Regular';
+        margin-top: 20px
+
+    }
+
+/*=== Header intro ===*/
+
+/*=== Map of the island ===*/
+
+.island {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.div_map {
+    display: none;
+    background-color: #fc8985;
+    width: 64%;
+    height: 180px;
+    margin: 0 auto;
+}
+/*=== Map of the island ===*/
+
+/*=== Video and photo ===*/
+
+.video_photo {
+    width: 100%;
+    text-align: center;
+    border: solid yellow 1px;
+}
+
+.video_photo h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    color: white;
+
+}
+
+.video {
+    background-color: black;
+    height: 230px;
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.photo_wrapper {
+    display: inline-block;
+    width: 430px;
+    height: 185px;
+    margin-left: 50px;
+    border: solid white 1px;
+}
+.photo {
+    background-color: black;
+    height: 90px;
+    width: 140px;
+    display: inline-block;
+}
+/*=== Video and photo ===*/
+
+/*=== Team ===*/
+.our_team {
+    margin-top: 150px;
+    width: 100%;
+    text-align: center;
+    border: solid yellow 1px;
+}
+.our_team h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    color: white;
+}
+.our_team h3 {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    color: white;
+    margin-top: 150px;
+}
+.team_mem {
+    background-color: #076070;
+    width: 280px;
+    height: 145px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+#right_team {
+    margin-left: 40px;
+}
+
+
+.circle {
+    margin-top: 100px;
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 120px;
+    -moz-border-radius: 120px;
+    border-radius: 120px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+}
+#circle_2,
+#circle_3,
+#circle_4 {
+    margin-left: 158px;
+}
+.circle > h2 {
+    margin-top: 150px;
+    font-size: 22px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    color: white;
+    white-space: nowrap;
+}
+.circle > p {
+    font-family: "Tahoma";
+    color: white;
+    font-size: 12px;
+}
+
+.circle_wrap1,
+.circle_wrap2 {
+    display: inline;
+}
+/*=== Team ===*/
+
+/*=== Reviews ===*/
+
+.reviews {
+    margin-top: 200px;
+    width: 100%;
+    text-align: center;
+    border: solid black 1px;
+}
+
+.reviews h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    color: white;
+}
+.video_review {
+    background-color: black;
+    height: 450px;
+    width: 730px;
+    margin: 0 auto;
+}
+
+/*=== Reviews ===*/
+
+/*=== Price ===*/
+
+.price {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    border: solid black 1px;
+}
+
+.price h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    color: white;
+}
+.p_wrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+.price_p {
+    font-size: 12px;
+    font-family: "Tahoma";
+    text-align: left;
+    margin-top: 40px;
+}
+
+/*=== Price ===*/
+
+/*=== Attention ===*/
+
+.attention {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    border: solid black 1px;
+}
+
+.attention h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 0;
+}
+.attention h2 {
+    text-align: center;
+    font-size: 26px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    color: white;
+    margin-top: 0;
+}
+.circle_wrap2_att,
+.circle_wrap1_att {
+    display: inline;
+}
+#circle_2_att,
+#circle_3_att,
+#circle_4_att {
+    margin-left: 90px;
+}
+.p_att {
+    margin-top: 130px;
+    font-family: "Tahoma";
+    font-size: 18px;
+    color: white;
+}
+.circle_att {
+    margin-top: 80px;
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 120px;
+    -moz-border-radius: 120px;
+    border-radius: 120px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.attention h3 {
+    text-align: center;
+    font-size: 22px;
+    font-family: 'tt_masters_demo_blackregular';
+    font-weight: lighter;
+    color: white;
+    margin-top: 170px;
+}
+
+.time_wr {
+    width:100%;
+    text-align: center;
+}
+.time {
+    background-color: black;
+    display: inline-block;
+    vertical-align: top;
+    height: 130px;
+    width: 80px;
+}
+/*=== Attention ===*/
+
+/*=== Footer ===*/
+footer {
+    margin-top: 200px;
+    width: 100%;
+    text-align: center;
+    border: solid black 1px;
+
+}
+.organizer {
+    background-color: #00495b;
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+}
+.request {
+    background-color: #f3736e;
+    display: inline-block;
+    height: 310px;
+    width: 350px;
+    margin-left: 450px;
+}
+/*=== Footer ===*/
+
+
+@media screen and (max-width:1280px) {
+    .video {
+        width: 31%;
+    }
+    .team_mem {
+        width: 22%;
+    }
+    #circle_2,
+    #circle_3,
+    #circle_4 {
+        margin-left: 10%;
+    }
+    .request {
+        margin-left:10%;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .txt_after_logo {
+        width: 55%;
+        margin-left: 0;
+    }
+    .right_wreath {
+        margin-left: 0;
+    }
+    #right  {
+        display: none;
+    }
+    .video {
+        width: 40%;
+    }
+      .photo_wrapper {
+        width: 36%;
+    }
+    .photo {
+        width: 48%;
+    }
+    .our_team {
+        margin-top: 15%;
+    }
+    .team_mem {
+        width: 26%;
+    }
+    #right_team {
+        margin-left: 4%;
+    }
+    .div_map {
+    display: block;
+    }
+    #circle_2,
+    #circle_3,
+    #circle_4 {
+        margin-left: 5%;
+    }
+    .video_review {
+      /*  height: 50px;*/
+        width: 78%;
+    }
+    #circle_2_att,
+    #circle_3_att,
+    #circle_4_att {
+        margin-left: 6%;
+    }
+    .time {
+        width: 9%;
+        height: 120px;
+    }
+    .request {
+        width: 40%;
+        height: 250px;
+    }
+    .organizer {
+        width: 45%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:635px) {
+    .video {
+        width: 75%;
+        display: block;
+        margin: 0 auto;
+    }
+    .photo {
+        width: 32%
+    }
+    .photo_wrapper {
+        width: 75%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    #right  {
+        display: inline-block;
+    }
+    .our_team {
+        margin-top: 10%;
+
+    }
+    .team_mem {
+        height: 100px;
+    }
+    .team_mem h3 {
+        margin-top: 100px;
+        letter-spacing:-1px;
+        font-size: 18px;
+    }
+    #circle {
+        margin-top: 50px;
+    }
+    .circle_wrap1,
+    .circle_wrap2 {
+        display: block;
+    }
+    #circle_2,
+    #circle_4 {
+        margin-left: 28%;
+    }
+    #circle_3 {
+       margin-left: 0; 
+    }
+    .circle_wrap2 {
+        margin-top: 10%; 
+    }
+    .video_review {
+        height: 300px;
+    }
+    .p_wrapper {
+        width: 78%;
+    }
+    .circle_wrap2_att,
+    .circle_wrap1_att {
+        display: block;
+    }
+    #circle_2_att,
+    #circle_4_att {
+        margin-left: 28%;
+    }
+    #circle_3_att {
+       margin-left: 0; 
+    }
+    .circle_wrap2_att {
+        margin-top: 50px;
+    }
+    .time {
+        height: 100px;
+    }
+    footer {
+        margin-top: 100px;
+    }
+    .organizer,
+    .request {
+        display: block;
+        margin: 0 auto;
+        height: 400px;
+        width: 450px;
+    }
+    .request {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:533px) {
+
+    .left_wreath, 
+    .right_wreath {
+        vertical-align: bottom;
+        height:170px;
+        width: 15%;
+    }
+    .date {
+        letter-spacing:-2px;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    #right  {
+        display: none;
+    }
+    .photo {
+        width: 49%
+    }
+    .team_mem {
+        height: 80px;
+    }
+    .team_mem h3 {
+        margin-top: 85px;
+    }
+    #circle_2,
+    #circle_4 {
+        margin-left: 10%;
+    }
+    .video_review {
+        height: 240px;
+    }
+    #circle_2_att,
+    #circle_4_att {
+        margin-left: 10%;
+    }
+    .time {
+        height: 80px;
+    }
+    footer {
+        margin-top: 50px;
+    }
+    .organizer,
+    .request {
+        display: block;
+        margin: 0 auto;
+        height: 300px;
+        width: 80%;
+    }
+    .request {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:342px) {
+    .left_wreath, 
+    .right_wreath {
+        height:210px;
+        width: 15%;
+    }
+     .video_review {
+        height: 200px;
+    }
+    .time {
+        height: 60px;
+    }
+}
+
