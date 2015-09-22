@@ -28,7 +28,6 @@ body {
     background-color: #49c5db;
 }
 
-
 /*=== Header intro ===*/
 
 .logo_img {
@@ -108,6 +107,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    height: 1000px;
+    background-position: center;
+    background-image: url(../images/island.png);
+    background-repeat: no-repeat;
 }
 
 .div_map {
@@ -365,13 +368,13 @@ footer {
     width: 100%;
     text-align: center;
     border: solid black 1px;
-
+    height: 350px;
 }
 .organizer {
     background-color: #00495b;
     display: inline-block;
     width: 350px;
-    height: 350px;
+    height: 100%;
 }
 .request {
     background-color: #f3736e;
@@ -398,6 +401,7 @@ footer {
     .request {
         margin-left:10%;
     }
+
 }
 
 @media screen and (max-width:840px) {
@@ -457,6 +461,11 @@ footer {
     .organizer {
         width: 45%;
         height: 300px;
+    }
+    .island {
+            height: 600px;
+            background-image: url(../images/840_island.png);
+
     }
 }
 
@@ -564,7 +573,7 @@ footer {
         display: none;
     }
     .photo {
-        width: 49%
+        width: 48%
     }
     .team_mem {
         height: 80px;
@@ -598,6 +607,11 @@ footer {
     }
     .request {
         margin-top: 50px;
+    }
+  
+    .island {
+        height: 300px;
+        background-image:url(../images/480_island.png);
     }
 }
 @media screen and (max-width:342px) {
