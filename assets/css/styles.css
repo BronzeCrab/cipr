@@ -29,7 +29,8 @@ body {
 }
 
 /*=== Header intro ===*/
-
+header {
+}
 .logo_img {
     display: block;
     margin: 0 auto;
@@ -44,7 +45,6 @@ body {
 
 }
 
-
 .right_wreath {
     display: inline-block;
     border: 1px solid black;
@@ -57,7 +57,6 @@ body {
     border: 1px solid black;
      width: 103px;
     height: 202px;
-   
 }
 .txt_after_logo {
     display: inline-block;
@@ -85,49 +84,233 @@ body {
   font-size: 34px;
   font-family: "tt_masters_demo_blackregular";
   color: rgb( 8, 95, 114 );
-
 }
 
 .date span {
     font-size: 25px;
 }
 .invite_txt {
-        font-size: 12px;
-        font-family: 'NokiaSansS60-Regular';
-        margin-top: 20px
-
+    font-size: 12px;
+    font-family: 'NokiaSansS60-Regular';
+    margin-top: 20px;
     }
 
 /*=== Header intro ===*/
 
 /*=== Map of the island ===*/
-
+.map {
+    background-image:
+    linear-gradient(
+      #49c5db, #fc8985
+    );
+    background: 
+    -webkit-gradient(
+    linear, left top, left bottom,
+    color-stop(0%,#49c5db),
+    color-stop(100%,#fc8985));
+}
 .island {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 1000px;
+    height: 1151px;
     background-position: center;
     background-image: url(../images/island.png);
     background-repeat: no-repeat;
+    margin-top: 20px;
+    position: relative;
+    
+}
+.a_point {
+    position: absolute;
+}
+#a_point1 {
+    top: 35%;
+    left: 90%;
+
+}
+#a_point2 {
+    top: 30%;
+    left: 80%;
+}
+#a_point3 {
+    top: 40%;
+    left: 65%;
+}
+#a_point4 {
+    top: 65%;
+    left: 55%;
+    
+}
+#a_point5 {
+    top: 60%;
+    left: 45%;
+}
+#a_point6 {
+    top: 62%;
+    left: 37%;
+}
+#a_point7 {
+    top: 60%;
+    left: 15%;
+    
+}
+#a_point8 {
+    top: 70%;
+    left: 15%;
+}
+#a_point9 {
+    top: 40%;
+    left: 15%;
+}
+#a_point0 {
+    /*border:2px solid green;*/
+    top: 38%;
+    left: 30%;
 }
 
-.div_map {
+/*#point1 {
+
+}*/
+/*.point circle:hover {
+    fill: blue;
+}*/
+
+.popup {
+    position: absolute;
     display: none;
+    width: 300px;
+    height: 100px;
+    background-color: #fc8985;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#popup1 {
+    top: 300px;
+    left: 50%;
+}
+#popup2 {
+    top: 180px;
+    left: 50%;
+}
+#popup3 {
+    top: 500px;
+    left: 70%;
+}
+#popup4 {
+    top: 800px;
+    left: 65%;
+}
+#popup5 {
+    top: 890px;
+    left: 40%;
+}
+#popup6 {
+    top: 830px;
+    left: 15%;
+}
+#popup7 {
+    top: 700px;
+    left: 7%;
+}
+#popup8 {
+    top: 980px;
+    left: 5%;
+}
+#popup9 {
+    top: 300px;
+    left: 5%;
+}
+#popup0 {
+    top: 300px;
+    left: 28%;
+}
+.line {
+    display: none;
+}
+#wrap {
+        display: none;
+        background-color: #49c5db;
+        height:125px;
+}
+#div_under_map {
+    display: none;
+    position: absolute;
     background-color: #fc8985;
     width: 64%;
-    height: 180px;
+    height: 130px;
+    right:0;
+    left:0;
+    margin-left:auto;
+    margin-right: auto;
+    top: 750px;
+}
+#fixed_div {
+    display: none;
+    width: 80%;
+    height:100%;
     margin: 0 auto;
+    background-color: #fc8985;
+}
+.visible {
+    display: block !important;
 }
 /*=== Map of the island ===*/
 
 /*=== Video and photo ===*/
 
+/*STYLES FOR CSS POPUP*/
+
+
+#blanket {
+   background-color:#111;
+   opacity: 0.65;
+   *background:none;
+   position:absolute;
+   z-index: 9001;
+   top:0px;
+   left:0px;
+   width:100%;
+}
+
+#popUpDiv {
+    position:absolute;
+    width:800px;
+    height:400px;
+    border:5px solid #000;
+    z-index: 9002;
+    border: solid 30px #ea7065;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    border-radius: 15px;
+    left:0;
+    right:0;
+    margin-left :auto;
+    margin-right: auto;
+}
+.exit {
+    position: relative;
+    top:0;
+    right:0;
+}
+#popUpDiv > a > img {position:relative; top:-14%; right:-54%}
+
+/*STYLES FOR CSS POPUP*/
+
 .video_photo {
     width: 100%;
     text-align: center;
-    border: solid yellow 1px;
+    background-color: #fc8985;
+    padding-top: 1%;
 }
 
 .video_photo h1 {
@@ -140,34 +323,148 @@ body {
 }
 
 .video {
-    background-color: black;
+	background-image: url(../images/video.png);
     height: 230px;
     width: 400px;
+    margin-left: 10px;
     display: inline-block;
     vertical-align: top;
+    border: solid 18px #ea7065;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    position:relative;
+}
+ #video_click {
+    	width:90px;
+    	height: 90px;
+    	background-image: url(../images/pink_circle.png);
+    	margin-left: auto;
+    	margin-right: auto;
+    	margin-top: 35%;
+    	position: absolute;
+    	top:50%;
+    	margin-top:-45px;
+    	left:50%;
+    	margin-left:-50px;
+    }
+.video_img {
+    width:100%;
+    height:100%;
 }
 
+.white_triangle {
+	margin-top:25px;
+
+}
+.photo_arrows {
+    text-align: center;
+    display: inline-block;
+    width: 570px;
+    margin-left: 50px;
+}
+#photo_arrow_left {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 120px;
+    margin-right: 10px;
+ 
+}
+#photo_arrow_right {
+    display: inline-block;
+    vertical-align: top;
+     margin-top: 120px;
+     margin-left: 10px;
+ 
+}
 .photo_wrapper {
     display: inline-block;
-    width: 430px;
-    height: 185px;
-    margin-left: 50px;
+    overflow: hidden;
+    width: 460px;
+    height: 205px;
     border: solid white 1px;
+    margin-top: 35px;
+}
+.overflow_visible {
+    overflow: visible;
 }
 .photo {
-    background-color: black;
     height: 90px;
     width: 140px;
     display: inline-block;
+    border: solid 4px #ea7065;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    cursor: url(../images/zoom.png), auto;
 }
+.photo_visible {
+    display: none;
+}
+#slider {
+    width: 460px;
+    height: 205px;
+    transition: all 2s ease-in-out;
+    -webkit-transition: all 2s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 2s ease-in-out; /** Firefox **/
+    -o-transition: all 2s ease-in-out; /** Opera **/
+    -moz-transform:    translateX(0);
+     -o-transform:      translateX(0);
+     -webkit-transform: translateX(0);
+     transform:         translateX(0);
+}
+
+.bigger {
+    position: absolute;
+    top: 1500px;
+    width: 80%;
+    height: 90%; 
+    z-index: 9005;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: url(../images/zoom.png), auto;
+    display:none;
+    border: solid 3px #fc8985;
+}
+.visible_bigger {
+    display: block;
+}
+/*#photo_1 {
+    background-image: url(../images/photo_1.png);
+}
+#photo_2 {
+    background-image: url(../images/photo_2.png);
+}
+#photo_3 {
+    background-image: url(../images/photo_3.png);
+}
+#photo_4 {
+    background-image: url(../images/photo_4.png);
+}
+#photo_5 {
+    background-image: url(../images/photo_5.png);
+}
+#photo_6 {
+    background-image: url(../images/photo_6.png);
+}*/
+
 /*=== Video and photo ===*/
 
 /*=== Team ===*/
 .our_team {
-    margin-top: 150px;
     width: 100%;
     text-align: center;
     border: solid yellow 1px;
+    background-color: #fc8985;
+    padding-top:5%;
 }
 .our_team h1 {
     text-align: center;
@@ -390,6 +687,7 @@ footer {
     .video {
         width: 31%;
     }
+
     .team_mem {
         width: 22%;
     }
@@ -401,9 +699,32 @@ footer {
     .request {
         margin-left:10%;
     }
+    .photo_arrows {
+        margin-left: 2%;
+    }
+     #popUpDiv {
+        width:85%;
+    }
 
 }
 
+@media screen and (max-width:950px) {
+    .photo_arrows {
+        width: 60%;
+        margin-left: 1%;
+    }
+    .photo_wrapper {
+        width: 86%;
+    }
+    #photo_arrow_left {
+        width: 3%;
+        margin-right: 2%;
+    }
+    #photo_arrow_right {
+        width: 3%;
+        margin-left: 1%;
+    }
+}
 @media screen and (max-width:840px) {
     .txt_after_logo {
         width: 55%;
@@ -412,29 +733,50 @@ footer {
     .right_wreath {
         margin-left: 0;
     }
-    #right  {
-        display: none;
-    }
     .video {
         width: 40%;
     }
-      .photo_wrapper {
-        width: 36%;
+    .photo_arrows {
+        width: 45%;
+    }
+    .photo_wrapper {
+        width: 87%;
+
     }
     .photo {
-        width: 48%;
+        width: 140px;
     }
-    .our_team {
+    .bigger {
+        height:70%;
+    }
+    #slider {
+        width: 470px;
+    }
+    .bigger {
+     top:1000px;
+
+    }
+
+/*    #photo_6 {
+       position:absolute;
+       left:-50%;
+       top:0;
+
+    }
+    #photo_5 {
+        position:absolute;
+        top:50%;
+        left:-50%;
+    }*/
+   
+/*    .our_team {
         margin-top: 15%;
-    }
+    }*/
     .team_mem {
         width: 26%;
     }
     #right_team {
         margin-left: 4%;
-    }
-    .div_map {
-    display: block;
     }
     #circle_2,
     #circle_3,
@@ -463,10 +805,10 @@ footer {
         height: 300px;
     }
     .island {
-            height: 600px;
-            background-image: url(../images/840_island.png);
-
+        height: 616px;
+        background-image: url(../images/840_island.png);
     }
+    
 }
 
 @media screen and (max-width:635px) {
@@ -476,10 +818,10 @@ footer {
         margin: 0 auto;
     }
     .photo {
-        width: 32%
+        width: 140px;
     }
-    .photo_wrapper {
-        width: 75%;
+    .photo_arrows {
+        width: 80%;
         display: block;
         margin: 0 auto;
         margin-top: 40px;
@@ -487,10 +829,13 @@ footer {
     #right  {
         display: inline-block;
     }
-    .our_team {
+    .white_triangle {
+        left: 47%;
+    }
+/*    .our_team {
         margin-top: 10%;
 
-    }
+    }*/
     .team_mem {
         height: 100px;
     }
@@ -552,6 +897,7 @@ footer {
     .request {
         margin-top: 50px;
     }
+
 }
 
 @media screen and (max-width:533px) {
@@ -565,15 +911,91 @@ footer {
     .date {
         letter-spacing:-2px;
     }
-
+    #div_under_map {
+        top:790px;
+    }
 }
 
 @media screen and (max-width:480px) {
+    #a_point1 {
+        top: 10%;
+        left: 90%;
+    }
+    #a_point2 {
+        top: 20%;
+        left: 80%;
+       
+    }
+    #a_point3 {
+        top: 40%;
+        left: 65%;
+    }
+    #a_point4 {
+        top: 65%;
+        left: 55%;
+
+        
+    }
+    #a_point5 {
+        top: 50%;
+        left: 45%;
+    }
+    #a_point6 {
+        top: 62%;
+        left: 37%;
+       
+    }
+    #a_point7 {
+        top: 60%;
+        left: 7%;
+   
+        
+    }
+    #a_point8 {
+        top: 76%;
+        left: 15%;
+     
+    }
+    #a_point9 {
+        top: 35%;
+        left: 15%;
+  
+    }
+    #a_point0 {
+        /*border:2px solid green;*/
+        top: 10%;
+        left: 30%;
+    }
+    #div_under_map {
+        width: 64%;
+        height: 130px;
+        top: 690px;
+
+    }
+    #popUpDiv {
+        width:75%;
+        height:50%;
+    }
     #right  {
         display: none;
     }
+    .white_triangle {
+        left: 45%;
+    }
+    .photo_wrapper {
+        width:85%;
+    }
+    .photo_arrows {
+        width: 90%;
+    }
+    #slider {
+        width:150%;
+    }
     .photo {
-        width: 48%
+        width: 30%;
+    }
+    .bigger {
+        height:50%;
     }
     .team_mem {
         height: 80px;
@@ -610,9 +1032,10 @@ footer {
     }
   
     .island {
-        height: 300px;
+        height: 374px;
         background-image:url(../images/480_island.png);
     }
+
 }
 @media screen and (max-width:342px) {
     .left_wreath, 
