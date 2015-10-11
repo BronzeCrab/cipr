@@ -3,14 +3,14 @@ function ready() {
     var point_links = document.getElementsByClassName("a_point");
     var pointsCount = point_links.length;
     for (var i = 0; i <= pointsCount; i += 1) {
-        point_links[i].onclick = function(e) {
+        point_links[i].onmouseover = function(e) {
             // get id number of "a_point" (last char in id):
             var id = this.id.substr(this.id.length - 1);
             // getting popup to display:
             var popup_id = "popup" + id;
             // check if size of window < 840 :
             if (window.matchMedia('(max-width: 840px)').matches) {
-                 // checking for small screen
+                 // checking for rather small screen
                 if (window.matchMedia('(max-width: 480px)').matches) {
                     var popup = document.getElementById("wrap");
                     var fixed_div = document.getElementById("fixed_div");
@@ -45,6 +45,8 @@ function ready() {
             // getting point coordinates
             var point_id = "point" + id;
             var point = document.getElementById(point_id);
+            // turning on another img
+            point.setAttribute("src", "assets/images/point.png");
             var r_point = getOffsetRect(point);
             console.log(r_point.top, r_point.left);
             // coordintes of popup:
@@ -97,6 +99,27 @@ function ready() {
             // toggling visible class to display/hide line:
             line.classList.toggle("visible");
         };
+        point_links[i].onmouseout = function(e) {
+            // get id number of "a_point" (last char in id):
+            var id = this.id.substr(this.id.length - 1);
+            // getting popup to display:
+            var popup_id = "popup" + id;
+            var popup = document.getElementById(popup_id);
+            popup.classList.remove("visible");
+            var line_id = "line" + id;
+            var line = document.getElementById(line_id);
+            line.classList.remove("visible");
+            var fixed_div = document.getElementById("fixed_div");
+            fixed_div.classList.remove("visible");
+            var fixed_div = document.getElementById("div_under_map");
+            fixed_div.classList.remove("visible");
+            var fixed_div = document.getElementById("wrap");
+            fixed_div.classList.remove("visible");
+            var point_id = "point" + id;
+            var point = document.getElementById(point_id);
+            // turning on another img
+            point.setAttribute("src", "assets/images/point_wh.png");
+        }
     }
 
 

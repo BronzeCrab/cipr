@@ -235,9 +235,10 @@ header {
     display: none;
 }
 #wrap {
-        display: none;
-        background-color: #49c5db;
-        height:125px;
+    display: none;
+    background-color: #49c5db;
+    height:125px;
+
 }
 #div_under_map {
     display: none;
@@ -250,6 +251,12 @@ header {
     margin-left:auto;
     margin-right: auto;
     top: 750px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
 }
 #fixed_div {
     display: none;
@@ -257,6 +264,12 @@ header {
     height:100%;
     margin: 0 auto;
     background-color: #fc8985;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
 }
 .visible {
     display: block !important;
@@ -278,8 +291,8 @@ header {
    left:0px;
    width:100%;
 }
-
-#popUpDiv {
+#popUpDiv2,
+#popUpDiv1 {
     position:absolute;
     width:800px;
     height:400px;
@@ -299,10 +312,13 @@ header {
 }
 .exit {
     position: relative;
-    top:0;
-    right:0;
+    top: -115%;
+    right: -53%;
 }
-#popUpDiv > a > img {position:relative; top:-14%; right:-54%}
+#popUpDiv > a > img {
+    position: relative;
+    top:-115%;
+    right:-54%}
 
 /*STYLES FOR CSS POPUP*/
 
@@ -323,7 +339,7 @@ header {
 }
 
 .video {
-	background-image: url(../images/video.png);
+    background-image: url(../images/video.png);
     height: 230px;
     width: 400px;
     margin-left: 10px;
@@ -339,26 +355,30 @@ header {
     position:relative;
 }
  #video_click {
-    	width:90px;
-    	height: 90px;
-    	background-image: url(../images/pink_circle.png);
-    	margin-left: auto;
-    	margin-right: auto;
-    	margin-top: 35%;
-    	position: absolute;
-    	top:50%;
-    	margin-top:-45px;
-    	left:50%;
-    	margin-left:-50px;
+        width:90px;
+        height: 90px;
+        background-image: url(../images/pink_circle.png);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 35%;
+        position: absolute;
+        top:50%;
+        margin-top:-45px;
+        left:50%;
+        margin-left:-50px;
     }
 .video_img {
     width:100%;
     height:100%;
 }
+.pink_circle {
+    position: relative;
+    top: -10em;
+    left: 2px;
 
+}
 .white_triangle {
-	margin-top:25px;
-
+    margin-top:25px;
 }
 .photo_arrows {
     text-align: center;
@@ -465,6 +485,7 @@ header {
     border: solid yellow 1px;
     background-color: #fc8985;
     padding-top:5%;
+    height: 1000px;
 }
 .our_team h1 {
     text-align: center;
@@ -478,33 +499,62 @@ header {
     font-size: 20px;
     font-family: 'tt_masters_demo_blackregular';
     font-weight: lighter;
-    color: white;
-    margin-top: 150px;
+    color: #773533;
 }
+
 .team_mem {
-    background-color: #076070;
     width: 280px;
     height: 145px;
     display: inline-block;
     vertical-align: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
-
-
+.team_mem_img {
+    width: 100%;
+}
+.team_mem_p {
+  font-size: 11px;
+  font-family: "Tahoma";
+  color: #773533;
+}
 #right_team {
     margin-left: 40px;
 }
 
-
+.circle_wrapper {
+    margin-top: 150px;
+}
 .circle {
-    margin-top: 100px;
+    width: 140px;
+    height: 140px;
+    -webkit-border-radius: 140px;
+    -moz-border-radius: 140px;
+    border-radius: 140px;
+    background-color: #eb7265;
+    display: inline-block;
+    vertical-align: top;
+}
+.inner_circle {
     width: 120px;
     height: 120px;
     -webkit-border-radius: 120px;
     -moz-border-radius: 120px;
     border-radius: 120px;
-    background-color: white;
-    display: inline-block;
-    vertical-align: top;
+    margin-left:10px;
+    margin-top: 10px;
+}
+#inner_1 {
+    background-image: url(../images/ruzov.png); 
+}
+#inner_2 {
+    background-image: url(../images/chagaev.png); 
+}
+#inner_3 {
+    background-image: url(../images/eliseeva.png); 
+}
+#inner_4 {
+    background-image: url(../images/semenova.png); 
 }
 #circle_2,
 #circle_3,
@@ -512,17 +562,30 @@ header {
     margin-left: 158px;
 }
 .circle > h2 {
-    margin-top: 150px;
     font-size: 22px;
     font-family: 'tt_masters_demo_blackregular';
     font-weight: lighter;
     color: white;
     white-space: nowrap;
 }
+
+.ruzov_name {
+    margin-left: -20px;
+}
+.chagaev_name {
+    margin-left: -20px;
+}
+.eliseeva_name {
+    margin-left: -30px;
+}
+.semenova_name {
+    margin-left: -20px;
+}
 .circle > p {
     font-family: "Tahoma";
     color: white;
     font-size: 12px;
+    width: 150px;
 }
 
 .circle_wrap1,
@@ -534,24 +597,41 @@ header {
 /*=== Reviews ===*/
 
 .reviews {
-    margin-top: 200px;
     width: 100%;
     text-align: center;
     border: solid black 1px;
 }
 
-.reviews h1 {
+.video_review > h1 {
+    padding-top: 30px;
     text-align: center;
     font-size: 30px;
     font-family: 'tt_masters_demo_blackregular';
     font-weight: lighter;
     color: white;
 }
+.video2 {
+    position: relative;
+    width: 96%;
+    height: 78%;
+    background-image: url(../images/video2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 .video_review {
-    background-color: black;
-    height: 450px;
-    width: 730px;
+    background-color: #fc8985;
+    height: 500px;
+    width: 720px;
     margin: 0 auto;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -khtml-border-radius: 7px;
+    border-radius: 7px;
 }
 
 /*=== Reviews ===*/
@@ -563,6 +643,7 @@ header {
     width: 100%;
     text-align: center;
     border: solid black 1px;
+    background-color: #d6d8d3;
 }
 
 .price h1 {
@@ -570,7 +651,34 @@ header {
     font-size: 30px;
     font-family: 'tt_masters_demo_blackregular';
     font-weight: lighter;
-    color: white;
+    color: #3b3b3b;
+}
+.park_beach {
+    width: 1220px;
+    background-color: #ffffff;
+    background-image: url(../images/hotel.png);
+    background-repeat: no-repeat; 
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+.park_beach > h2 {
+    text-align: left;
+    margin-left: 500px;
+    color: #0c7da5;
+}
+
+
+.park_beach > p {
+    text-align: left;
+    margin-left: 500px;
+    font-size: 14px;
+    font-family: "Tahoma";
 }
 .p_wrapper {
     width: 500px;
@@ -687,7 +795,6 @@ footer {
     .video {
         width: 31%;
     }
-
     .team_mem {
         width: 22%;
     }
@@ -704,6 +811,21 @@ footer {
     }
      #popUpDiv {
         width:85%;
+    }
+    .park_beach {
+        width:95%;
+    }
+    .park_beach {
+        background-size: 50% 100%;
+    }
+    .park_beach > h2 {
+        margin-left: 50%;
+    }
+
+
+    .park_beach > p {
+        margin-left: 50%;
+
     }
 
 }
@@ -756,7 +878,7 @@ footer {
      top:1000px;
 
     }
-
+    
 /*    #photo_6 {
        position:absolute;
        left:-50%;
@@ -769,20 +891,44 @@ footer {
         left:-50%;
     }*/
    
-/*    .our_team {
-        margin-top: 15%;
-    }*/
+    .our_team {
+        height: 1300px;
+    }
     .team_mem {
         width: 26%;
     }
     #right_team {
         margin-left: 4%;
     }
+    .circle_wrapper {
+        margin-top: 160px;
+    }
+    #circle {
+        margin-top: 50px;
+    }
+    .circle > p {
+        width: 200%;
+        margin-left: -50%;
+    }
+    .circle_wrap1,
+    .circle_wrap2 {
+        display: block;
+    }
     #circle_2,
+    #circle_4 {
+        margin-left: 28%;
+    }
+    #circle_3 {
+       margin-left: 0; 
+    }
+    .circle_wrap2 {
+        margin-top: 35%; 
+    }
+/*    #circle_2,
     #circle_3,
     #circle_4 {
         margin-left: 5%;
-    }
+    }*/
     .video_review {
       /*  height: 50px;*/
         width: 78%;
@@ -832,40 +978,33 @@ footer {
     .white_triangle {
         left: 47%;
     }
-/*    .our_team {
-        margin-top: 10%;
+    .our_team {
+        height: 1400px;
 
-    }*/
+    }
     .team_mem {
         height: 100px;
     }
     .team_mem h3 {
-        margin-top: 100px;
         letter-spacing:-1px;
         font-size: 18px;
     }
-    #circle {
-        margin-top: 50px;
-    }
-    .circle_wrap1,
-    .circle_wrap2 {
-        display: block;
-    }
-    #circle_2,
-    #circle_4 {
-        margin-left: 28%;
-    }
-    #circle_3 {
-       margin-left: 0; 
-    }
-    .circle_wrap2 {
-        margin-top: 10%; 
-    }
+    
     .video_review {
         height: 300px;
     }
     .p_wrapper {
         width: 78%;
+    }
+    .circle > p {
+        width:130%;
+        margin-left: -15%;
+    }
+    .circle_wrapper {
+        margin-top: 50%;
+    }
+    .circle_wrap2 {
+        margin-top: 340px;
     }
     .circle_wrap2_att,
     .circle_wrap1_att {
@@ -880,6 +1019,9 @@ footer {
     }
     .circle_wrap2_att {
         margin-top: 50px;
+    }
+    .video2 {
+        height: 67%;
     }
     .time {
         height: 100px;
@@ -997,11 +1139,17 @@ footer {
     .bigger {
         height:50%;
     }
+    .our_team {
+        height: 1500px;
+    }
     .team_mem {
         height: 80px;
     }
     .team_mem h3 {
-        margin-top: 85px;
+        /*margin-top: 85px;*/
+    }
+    .circle_wrapper {
+        margin-top: 80%;
     }
     #circle_2,
     #circle_4 {
@@ -1013,6 +1161,12 @@ footer {
     #circle_2_att,
     #circle_4_att {
         margin-left: 10%;
+    }
+    .video_review {
+        width: 90%;
+    }
+    .video2 {
+        height: 60%;
     }
     .time {
         height: 80px;
@@ -1037,6 +1191,47 @@ footer {
     }
 
 }
+@media screen and (max-width:410px) {
+    .our_team {
+        height: 1900px;
+    }
+    .circle {
+        display: block;
+        margin-left:auto !important;
+        margin-right: auto;
+        position: relative;
+    }
+    .circle > h2 {
+        margin-top: 100%;
+        position: absolute;
+       
+      
+    }
+    .circle > p {
+        margin-top: 120%;
+        position: absolute;
+        width: 280px;
+        margin-left: -50%;
+    }
+    .inner_circle {
+        position: absolute;
+    }
+    .circle_wrapper {
+        margin-top: 400px;
+    }
+    .circle_wrap2 {
+        margin-top: 200px;
+    }
+    #circle_4 {
+        margin-top: 200px;
+    }
+    #circle_2 {
+        margin-top: 200px;
+    }
+    .video_review {
+        width: 100%;
+    }
+}
 @media screen and (max-width:342px) {
     .left_wreath, 
     .right_wreath {
@@ -1044,7 +1239,7 @@ footer {
         width: 15%;
     }
      .video_review {
-        height: 200px;
+        height: 350px;
     }
     .time {
         height: 60px;
