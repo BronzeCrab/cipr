@@ -12,13 +12,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
-<body class="landing" onload=ready();>
+<body class="landing">
     <div id="page-wrapper">
         <!-- Header -->
         <header id="header">
          <!--    <img src="assets/images/logo.png" alt="logo" class="logo_img"/> -->
-            <div class="logo_img">
-            </div>
+            <img class="logo_img" src="assets/images/logo.png">
+        
                 <div class="intro_wr">
              
                     <img src="assets/images/left_wreath.png" alt="left_wreath" class="left_wreath"/>
@@ -41,53 +41,54 @@
 
         </header>
         <section class="map">
+        <div class="island_wr">
             <div class="island">
-                <div id="a_point1" class="a_point">
+                <div id="a_point1" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point1"/>
                 </a>
                 </div>
-                <div id="a_point2" class="a_point">
+                <div id="a_point2" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point2"/>
                 </a>
                 </div>
-                <div id="a_point3" class="a_point">
+                <div id="a_point3" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point3"/>
                 </a>
                 </div>
-                <div id="a_point4" class="a_point">
+                <div id="a_point4" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point4"/>
                 </a>
                 </div>
-                <div id="a_point5" class="a_point">
+                <div id="a_point5" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point5"/>
                 </a>
                 </div>
-                <div id="a_point6" class="a_point">
+                <div id="a_point6" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point6"/>
                 </a>
                 </div>
-                <div id="a_point7" class="a_point">
+                <div id="a_point7" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point7"/>
                 </a>
                 </div>
-                <div id="a_point8" class="a_point">
+                <div id="a_point8" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point8"/>
                 </a>
                 </div>
-                <div id="a_point9" class="a_point">
+                <div id="a_point9" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point9"/>
                 </a>
                 </div>
-                <div id="a_point0" class="a_point">
+                <div id="a_point0" class="a_point" onmouseover="lines(this)" onmouseout="disappear(this)">
                 <a href="#test">
                     <img src="assets/images/point_wh.png" class="point" id="point0"/>
                 </a>
@@ -116,12 +117,13 @@
             </svg>
             <!-- <img src="assets/images/island.png" alt="map of cipr" class="island"/> -->
             </div>
+
             <div id="div_under_map"></div>
             <div id="wrap">
             <div id="fixed_div"></div>
             </div>
+        </div>
         </section>
-
         <section class="video_photo" id="video_id">
             <h1>ВИДЕО/ФОТО С ФЕСТИВАЛЯ</h1>
                 <div id="blanket" style="display:none;"></div>
@@ -163,9 +165,9 @@
                     </div>
                 </div>
                 <img class="bigger" id="bigger_photo" onclick="hide_bigger(this.id)"> 
-        </section>
+        
 
-        <section class="our_team">
+        <div class="our_team">
             <h1>«НАША КОМАНДА»</h1>
             
                 <div class="team_mem">
@@ -178,7 +180,6 @@
                     чистоты, культуры, разума, духовности и здорового образа жизни!
                 </p>
                 </div>
-              
                 <div class="team_mem team_mem_club" id="right_team">
                 <a href="http://www.ruzov.ru/">
                 <img src="assets/images/club_bal.png" class="team_mem_img">
@@ -189,7 +190,6 @@
                     людей знаний, способных сделать их счастливыми!
                 </p>
                 </div>
-         
                 <div class="team_mem team_mem_mozkt" id="right_team">
                 <a href="http://mockt.ru/">
                 <img src="assets/images/mozkt.png" class="team_mem_img">
@@ -208,7 +208,6 @@
                     <div class="circle" id="circle_1">
                     <div class="inner_circle" id="inner_1">
                     </div>
-
                         <h2 class="ruzov_name">ВЯЧЕСЛАВ РУЗОВ</h2>
                         <p>
                             Широко известный в России и за рубежом писатель, опубликовавший более 30 книг-исследований о человеческой душе, поисках цели жизни, предназначении, счастье, любви и возвышенных взаимоотношениях. Руководитель просветительского клуба "БАЛАНС" (г. Москва), основатель "Международного Образовательного Центра Консультативных Технологий"  (МОЦКТ). Автор идеи и вдохновитель проекта российского телевизионного канала "БАЛАНС-ТВ".
@@ -242,8 +241,12 @@
                     </div>
                 </div>
             </div>
+        </div>
         </section>
-        <section class="reviews" id="reviews">
+
+
+        <section class="price">
+        <div class="reviews" id="reviews">
             <div class="video_review">
             <h1>ОТЗЫВЫ О ФЕСТИВАЛЕ</h1>
                 <div id="blanket" style="display:none;"></div>
@@ -262,59 +265,163 @@
                 </div>
                 </div>
             </div>
-        </section>
-        <section class="price">
+        </div>
+            <div class="price_wr">
             <h1>ЦЕНЫ / УСЛОВИЯ</h1>
 
             <div class="park_beach">
+             <div class="park_txt">
              <h2>Отель «Park Beach»</h2>
-             <p> Расположен на одном из лучших пляжей Лимассола, в 3 км от центра города, рядом находится плавательный центр с бассейном олимпийского стандарта. Название отеля «Park Beach Hotel» говорит само за себя. Отель уютно расположился в живописном сосновом бору с эвкалиптовыми аллеями на песчаном побережье Средиземного моря.
+             <p class="blue"> Расположен на одном из лучших пляжей Лимассола, в 3 км от центра города, рядом находится плавательный центр с бассейном олимпийского стандарта. Название отеля «Park Beach Hotel» говорит само за себя. Отель уютно расположился в живописном сосновом бору с эвкалиптовыми аллеями на песчаном побережье Средиземного моря.
              </p>
              <p>
              Этот необычный двухэтажный отель состоит из основного здания и 4 флигелей. В идею отеля было заложено желание создать комфортабельные номера с прекрасным видом на море и плавно переходящим в газон нижним этажом. Бассейн с прохладной водой и зелёный газон вокруг способствуют комфортабельному отдыху гостей. Весной 2013 года в отеле проведён капитальный ремонт.
              </p>
+             </div>
             </div>
-            <div class="p_wrapper">
-                <p class="price_p">
-                Размещение в номере «даблрум» (две кровати) с одного человека стоит
-                48 евро за ночь с трёхразовым питанием (на двоих - 96 евро за номер)
-                </p>
-                <p class="price_p">
-                Стоимость за 9 ночей на 1 человека при двухместном размещении с питанием
-                составит 432 евро. Возможно одноместное проживание с дпплатой 18 евро (66
-                евро за ночь/594 евро за весь период).
-                </p>
-                <p class="price_p">
-                Проживание в номере для одного ребёнка до 12 лет - бесплатно (за детей старше
-                2-х лет оплачивается 10 евро в сутки за питание).
-                </p>
-                <p class="price_p">
-                Для второго ребёнка до 12 лет предоставляется скидка за проживание - 50%, то есть
-                24 евро за ночь с питанием.
-                </p>
-                <p class="price_p">
-                Дополнительная кровать в номере для третьего взрослого (лиц, старше 12 лет) - 36 евро за
-                ночь с питанием. Желащие могут увеличить срок своего отдыха при предварительном согласовании
-                с организаторами и дополнительной оплате за проживание.
-                </p>
-                <p class="price_p">
-                Стоимость авиаперелёта Москва-Ларнака-Москва составит от 13500Р (ориентировачно). Участники 
-                фестиваля приобретают авиабилеты самостоятельно или могут обратиться за помощью к организаторам 
-                фестиваля.
-                </p>
+
+            <div class="hotel">
+         
+            <img class="hotel_img" src="assets/images/hotel2.png">
+            <p class="hotel_p">
+            Этот необычный двухэтажный отель состоит из основного здания и 4 флигелей. В идею отеля было заложено желание создать комфортабельные номера с прекрасным видом на море и плавно переходящим в газон нижним этажом. Бассейн с прохладной водой и зелёный газон вокруг способствуют комфортабельному отдыху гостей. Весной 2013 года в отеле проведён капитальный ремонт.
+            </p>
             </div>
+
+            <div class="beach">
+         
+            <img class="beach_img" src="assets/images/beach.png">
+            <p class="beach_p">
+            На Кипре всё имеет свой уникальный и индивидуальный стиль. Как и небольшой уютный отель, в котором вы будете жить на протяжении всего фестиваля. Он расположен на первой линии с видом на море. Морской бриз будет наполнять ваши комнаты ароматом свежести и прохладой. Отель окружает парковая зона. Запах эвкалипта и хвойных деревьев, смешиваясь с морским воздухом, создаёт неповторимый микроклимат, полезный для души и тела. Специально оборудованная пешеходная зона даст Вам возможность наслаждаться прогулкой вдоль всего многокилометрового пляжа. Для клиентов отеля доступны финская сауна, гимнастический зал. Для маленьких детей есть детский бассейн, комнаты с игрушками и видео играми. На все виды водных аттракционов для посетителей отеля предоставляется скидка. Отель предоставляет отдельный ресторан для организации трёхразового вегетарианского питания, которое искусные повара будут специально готовить для гостей фестиваля. На территории отеля работают бары и рестораны, гостеприимно предлагая отведать разнообразные напитки и блюда по вашему выбору в течение дня.
+            </p>
+            </div>
+
+            <div class="photo_wrapper_2">
+            <img class="bigger_2" id="bigger_photo_2" onclick="hide_bigger(this.id)"> 
+            <div class="photo_line">
+                <div class="room_wrapper">
+                <a href="#lol" id="room_1" onclick="switchRoom(this.id)"><img class="room" src="assets/images/room_1.png"></a>
+                </div>
+                <div class="room_wrapper">
+                <a href="#lol" id="room_2" onclick="switchRoom(this.id)"><img class="room" src="assets/images/room_2.png"></a>
+                </div>
+                <div class="room_wrapper">
+                <a href="#lol" id="room_3" onclick="switchRoom(this.id)"><img class="room" src="assets/images/room_3.png"></a>
+                </div>
+                <div class="room_wrapper">
+                <a href="#lol" id="room_4" onclick="switchRoom(this.id)"><img class="room" src="assets/images/room_4.png"></a>
+                </div>
+                <div class="room_wrapper">
+                <a href="#lol" id="room_5" onclick="switchRoom(this.id)"><img class="room"  src="assets/images/room_5.png"></a>
+                </div>
+            </div>
+            </div>
+            <div class="room_details">
+                <div class="room_img_div">
+                <img class="room_details_img" src="assets/images/room_details_img.png">
+                </div>
+                <div class="room_p">
+                    <p>
+                    Размещение в номере «даблрум» ( две кровати ) с одного человека стоит 48 € за ночь с трёхразовым питанием ( на двоих – 96 € за номер ).
+                    </p>
+                    <p class="blue">
+                    Cтоимость за 9 ночей на 1 человека при двухместном размещении с питанием составит 432 €<br> ( на двоих 864 € ).
+                    </p>
+                    <p>
+                    Возможно одноместное проживание с доплатой 18 € — 66 € за ночь <span class="blue">( 594 € за весь период ).</span>
+                    </p>
+                </div>
+            </div>
+            </div>
+    
+
+       
+            <div class="res_wr">
+                <div class="living">
+                    <div class="fl_row">
+                        <div class="fl_col">
+                            <img class="babe_1" src="assets/images/babe_1.png">
+                            <p>
+                            Проживание в номере для одного ребёнка до 12 лет – бесплатно (за детей старше 2-х лет оплачивается 10 евро в сутки за питание). 
+                            </p>
+                        </div>
+                        <div class="fl_col right_col">
+                            <img class="babe_3" src="assets/images/babe_1.png">
+                            <img class="babe_2" src="assets/images/babe_2.png">
+                            <p>
+                            Для второго ребёнка до 12 лет предоставляется скидка за проживание – 50%, то есть 24 евро за ночь с питанием.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fl_row">
+                        <div class="fl_col">
+                        <img class="bed" src="assets/images/bed.png">
+                        <p>
+                            Дополнительная кровать в номере для третьего взрослого (лиц, старше 12 лет) – 36 евро за ночь с питанием.
+                        </p>
+                        </div>
+                        <div class="fl_col right_col">
+                        <img class="cal" src="assets/images/cal.png">
+                        <p>
+                            Желающие могут увеличить срок своего отдыха при предварительном согласовании с организаторами и дополнительной оплате за проживание. 
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="avia">
+                    <div class='img_wr'>
+                    <img class="avia_img" src="assets/images/avia.png">
+                    <div class="centerer"></div>
+                    </div>
+                    <div class="p_wr">
+                    <p>
+                    Стоимость авиаперелёта Москва-Ларнака-Москва составит от 13’500 руб. (ориентировочно). Участники фестиваля приобретают авиабилеты самостоятельно или могут обратиться за помощью к организаторам ретрита.
+                    </p>
+                    </div>
+                </div>
+            
+
+            <h1>ПО ЖЕЛАНИЮ ДОПОЛНИТЕЛЬНО ОПЛАЧИВАЕТСЯ:</h1>
+            <div class="ul_wr">
+            <ul>
+                <li>
+                    Стоимость личной консультации Рузова В.О. или лекторов ретрита – 100 €;
+                </li>
+                <li>
+                    Групповая однодневная экскурсионная поездка – 60 евро с человека, за ребёнка от 2-х до 12 лет – 30 €<br> (в течение ретрита будут организованы две большие экскурсионные поездки по Кипру);
+                </li>
+                <li>
+                    Сейф в номере – 4 €/сутки;
+                </li>
+                <li>
+                    Холодильник в номере – 4 €/сутки; 
+                </li>
+                <li>
+                    Два лежака и один зонт на побережье – 5 €. 
+                    <br><br>
+                    Пляжные полотенца лучше взять с собой или купить, также пляжные зонты можно недорого купить на месте. Шезлонги на территории отеля – бесплатно
+                </li>
+            </ul>
+            </div>
+         </div>
         </section>
+
         <section class="attention">
+        <div class="att_wr">
             <h1>ВНИМАНИЕ!</h1>
             <h2>ОПЛАТИВШИМ ДО 31 ДЕКАБРЯ:</h2>
          
                 <div class="circle_wrap1_att">
                     <div class="circle_att">
+                        <div class="inner_circle_2" id="inner_5">
+                        </div>
                         <p class="p_att">
                             Лучшие места в отеле
                         </p>
                     </div>
                     <div class="circle_att" id="circle_2_att">
+                        <div class="inner_circle_2" id="inner_6">
+                        </div>
                         <p class="p_att">
                             MP3-Лекция Рузова В.О. в подарок
                         </p>
@@ -322,48 +429,145 @@
                 </div>
                 <div class="circle_wrap2_att">
                     <div class="circle_att" id="circle_3_att">
+                        <div class="inner_circle_2" id="inner_7">
+                        </div>
                         <p class="p_att">
-                            Скидка 50% на сборники с фестивалей
+                            Скидка <span class="bold">50%</span> на сборники с фестивалей
                             за 14 и 15 года
                         </p>
-                    </div>
+                    </div> 
                     <div class="circle_att" id="circle_4_att">
+                        <div class="inner_circle_2" id="inner_8">
+                        </div>
                         <p class="p_att">
-                            Скидка 15% на все товары в Добром
+                            Скидка <span class="bold">15%</span> на все товары в Добром
                             магазине
                         </p>
                     </div>
                 </div>
             <h3>ДО КОНЦА АКЦИИ:</h3>
-            <div class="time_wr"> 
-                <div class="time">
-                </div>
-                <div class="time">
-                </div>
-                <div class="time">
-                </div>
-                <div class="time">
-                </div>
-                <div class="time">
-                </div>
-                <div class="time">
-                </div>
-                <div class="time">
-                </div>
-                <div class="time">
-                </div>
+<!--             <p id="demo"></p> -->
+            <div class="time_wr">
+    
+                    <div class="time">
+                        <div class="time_1">
+                        </div>
+                        <div class="time_2">
+                        </div>
+                        <div class="value" id="d_value_1">
+                        </div>
+                        <span class="time_txt">дней</span>
+                    </div>
+
+                    <div class="time">
+                        <div class="time_1">
+                        </div>
+                        <div class="time_2">
+                        </div>
+                        <div class="value" id="d_value_2">
+                        </div> 
+                    </div>
+
+                    <div class="time">
+                        <div class="time_1">
+                        </div>
+                        <div class="time_2">
+                        </div>
+                        <div class="value" id="h_value_1">
+                        </div> 
+                        <span class="time_txt">часов</span>
+                    </div>
+        
+             
+                    <div class="time">
+                        <div class="time_1">
+                        </div>
+                        <div class="time_2">
+                        </div>
+                        <div class="value" id="h_value_2">
+                        </div> 
+                    </div>
+             
+              
+                    <div class="time">
+                        <div class="time_1">
+                        </div>
+                        <div class="time_2">
+                        </div>
+                        <div class="value" id="m_value_1">
+                        </div> 
+                        <span class="time_txt">минут</span>
+                    </div>
+             
+          
+                    <div class="time">
+                        <div class="time_1">
+                        </div>
+                        <div class="time_2">
+                        </div>
+                        <div class="value" id="m_value_2">
+                        </div> 
+                    </div>
+
+                    <div class="time_pink">
+                        <div class="time_pink_1">
+                        </div>
+                        <div class="time_pink_2">
+                        </div>
+                        <div class="value" id="s_value_1">
+                        </div>
+                        <span class="time_txt">секунд</span>
+                    </div>
+
+                    <div class="time_pink">
+                        <div class="time_pink_1">
+                        </div>
+                        <div class="time_pink_2">
+                        </div>
+                        <div class="value" id="s_value_2">
+                        </div> 
+                    </div>
+
             </div>
         </section>
 
         <footer>
-            <div class="organizer">
-            </div>
-            <div class="request">
+            <div class="footer_wr">
+                <div class="organizer">
+                    <div class="questions">
+                    По всем вопросам обращайтесь<br>
+                    <span class="quest_2">к организаторам:<br></span>
+                    </div>
+                    <p class="contacts">
+                        ДМИТРИЙ
+                        <p class="dim_cont">
+                            <span class="green">тел.:</span> +7(495) 722-53-29<br>
+                            <span class="green">e-mail:</span> balance-tv@mail.ru<br>
+                            <span class="green">skype:</span> dim262
+                        </p>
+                    </p>
+                    <p class="contacts">
+                        КСЕНИЯ
+                        <p class="dim_cont">
+                            <span class="green">e-mail:</span> ksenia1972@mail.ru<br>
+                            <span class="green">skype:</span> eliseeva_ksenia108
+                        </p>
+                    </p>
+                </div>
+                <div class="request">
+                    <h3>ОСТАВИТЬ ЗАЯВКУ</h3>
+                    <form>
+                        <input type="text" name="phone" value="Телефон"><br>
+                        <input id="input2" type="text" name="email" value="email"><br>
+                        <button href="" class="button">ОСТАВИТЬ ЗАЯВКУ</button>
+                    </form>
+                </div>
             </div>
         </footer>
     </div>
 
 <script src="assets/js/map_popup.js"></script>
 <script src="assets/js/css-pop.js"></script>
+<script src="assets/js/timer.js"></script>
 </body>
 </html>
