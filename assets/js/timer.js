@@ -1,6 +1,6 @@
 // дата, до которой будет считать таймер
 // var d = new Date    (year, month, day, hours, minutes, seconds, milliseconds);
-var end_date = new Date(2015, 9, 31, 20, 10, 55);
+var end_date = new Date(2015, 10, 31, 20, 10, 55);
 // время в милисекнудах до конца (с 1970 года)
 end_time = end_date.getTime();
 

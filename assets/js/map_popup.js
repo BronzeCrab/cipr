@@ -2,12 +2,56 @@
     var point_links = document.getElementsByClassName("a_point");
     var pointsCount = point_links.length;
 
-    function lines(e) {
+    function linesDraw(e) {
         // get id number of "a_point" (last char in id):
         var id = e.id.charAt(e.id.length - 1);
         // getting popup to display:
         var popup_id = "popup" + id;
-        console.log(popup_id);
+        // then adding text
+        var h4 = document.createElement('h4');
+        var p = document.createElement('p');
+        if (id == 1) {
+            h4.innerHTML += 'Отдых в одном из лучших мест планеты';
+            p.innerHTML += 'Кипр - божественный остров, место рождения Афродиты, богини любви и красоты! В окружении живописного соснового бора с эвкалиптовыми аллеями на песчаном побережье Средиземного моря!';
+        }
+        else if (id == 2) {
+           h4.innerHTML += 'Волшебные знания';
+           p.innerHTML += 'проверенные опытом и знаниями мудрецов! Волшебство практичных решений любых трудностей - в каждый дом!';        
+        }
+        else if (id == 3) {
+           h4.innerHTML += 'Самые современные курортные условия отдыха';
+           p.innerHTML += 'имеют все удобства для полноценного семейного отдыха!';        
+        }
+        else if (id == 4) {
+           h4.innerHTML += 'Отель';
+           p.innerHTML += 'расположен на одном из лучших пляжей Лимассола на первой линии у моря!';        
+        }
+        else if (id == 5) {
+           h4.innerHTML += 'Вегетарианская пища';
+           p.innerHTML += 'приготовленное по всем правилам здорового питания и освещенная бескорыстной любовью профессиональных поваров!';        
+        }
+        else if (id == 6) {
+           h4.innerHTML += 'Личные встречи';
+           p.innerHTML += 'с лектором мирового уровня Рузовым В.О.';        
+        }
+        else if (id == 7) {
+           h4.innerHTML += 'Консультации';
+           p.innerHTML += 'На фестивале у вас есть уникальная возможность пройти консультации у профессиональных консультантов по семейным отношениям и астрологии! ';        
+        }
+        else if (id == 8) {
+           h4.innerHTML += 'Незабываемое теплое общение и новые друзья!';
+           p.innerHTML += '';        
+        }
+        else if (id == 9) {
+           h4.innerHTML += 'Разнообразная и уникальная развлекательная программа!';
+           p.innerHTML += 'Вас ждут экскурсии, волшебные концерты и музыкальные представления! ';        
+        }
+        else if (id == 0) {
+           h4.innerHTML += 'Высококачественные и недорогие товары';
+           p.innerHTML += 'в своем уникальном и индивидуальном Кипрском стиле! ';        
+        }
+        h4.style.cssText = 'font-family: "tt_masters_demo_blackregular";font-size: 16px;margin-left: 1em;margin-top: 1em;margin-right: 1em;margin-bottom: 0;color:white;z-index: 1;';
+        p.style.cssText = 'font-family: "Tahoma";font-size: 14px; margin-left: 1em;margin-right: 1em;color:white;z-index: 1;';
         // check if size of window < 840 :
         if (window.matchMedia('(max-width: 840px)').matches) {
             // checking for rather small screen
@@ -16,16 +60,35 @@
                 var fixed_div = document.getElementById("fixed_div");
                 fixed_div.classList.toggle("visible");
                 var screen480 = true;
-            } else {
+                // cleaning up div
+                if (fixed_div.hasChildNodes()) {
+                    fixed_div.removeChild( fixed_div.childNodes[0] );
+                    fixed_div.removeChild( fixed_div.childNodes[0] );
+                }
+                fixed_div.appendChild(h4);
+                fixed_div.appendChild(p);
+            } 
+            else {
                 var popup = document.getElementById("div_under_map");
+                added = document.getElementById("added");
+                if (added) {
+                    popup.removeChild(added);
+                }
+                popup.innerHTML += '<div id="added"></div>';
+                added = document.getElementById("added");
+                
+
+                added.appendChild(h4);
+                added.appendChild(p);
+
             }
-            //hiding any lines:
+            // hiding any lines:
             lines = document.getElementsByClassName('line');
             for (var i = 0; i <= 9; i += 1) {
                 if (lines[i].classList.contains("visible") && lines[i].id != "line" + id) {
                     lines[i].classList.remove("visible");
                     popup.classList.remove("visible");
-                    //setting variable to later disply popup for <480 
+                    // setting variable to later disply popup for < 480 
                     var clicked_another_point = true;
                     // if small screen and clicked another line then don't hide fixed;
                     if (screen480) {
@@ -37,21 +100,24 @@
         // else display uniq popup for each case
         else {
             var popup = document.getElementById(popup_id);
-            console.log(popup);
         }
         // toggling visible class:
         popup.classList.toggle("visible");
         // displaying and hiding line
         // getting point coordinates
-        var point_id = "point" + id;
+        var point_id = "a_point" + id;
         var point = document.getElementById(point_id);
         // turning on another img
-        point.setAttribute("src", "assets/images/point.png");
+
+        //TODO go on and remake all like so
+        // trying new stuff on first image
+        point.style.backgroundImage = "url('assets/images/point.png')";
+
+
+        // point.setAttribute("src", "assets/images/point.png");
         var r_point = getOffsetRect(point);
-        console.log(r_point.top, r_point.left);
         // coordintes of popup:
         var r_popup = getOffsetRect(popup);
-        console.log(r_popup.top, r_popup.left);
         // getting line element:
         // id of line:
         var line_id = "line" + id;
@@ -59,41 +125,43 @@
         // setting coordinates for line if popup is visible:
         if (popup.classList.contains("visible")) {
             var canvas = document.getElementById('mycanvas');
-            line.setAttribute("x1", r_point.left + 20);
+            line.setAttribute("x1", r_point.left + 10);
             if (window.matchMedia('(max-width: 358px)').matches) {
-                console.log('358');
-                line.setAttribute("y1", r_point.top - 90);
+                line.setAttribute("y1", r_point.top - 220);
                 line.setAttribute("x2", r_popup.left + 150);
-                line.setAttribute("y2", r_popup.top + 45);
+                line.setAttribute("y2", r_popup.top - 230);
             } else if (window.matchMedia('(max-width: 380px)').matches) {
-                console.log('380');
-                line.setAttribute("y1", r_point.top - 50);
+                line.setAttribute("y1", r_point.top - 220);
                 line.setAttribute("x2", r_popup.left + 150);
-                line.setAttribute("y2", r_popup.top + 45);
+                line.setAttribute("y2", r_popup.top - 210);
+            } else if (window.matchMedia('(max-width: 410px)').matches) {
+                line.setAttribute("y1", r_point.top - 220);
+                line.setAttribute("x2", r_popup.left + 150);
+                line.setAttribute("y2", r_popup.top -170);
             } else if (window.matchMedia('(max-width: 480px)').matches) {
-                console.log('480');
-                line.setAttribute("y1", r_point.top - 30);
+                line.setAttribute("y1", r_point.top - 180);
                 line.setAttribute("x2", r_popup.left + 150);
-                line.setAttribute("y2", r_popup.top + 45);
-            } else if (window.matchMedia('(max-width: 508px)').matches) {
-                line.setAttribute("y1", r_point.top - 35);
-                line.setAttribute("x2", r_popup.left + 300);
-                line.setAttribute("y2", r_popup.top + 45);
-
+                line.setAttribute("y2", r_popup.top - 170);
             } else if (window.matchMedia('(max-width: 533px)').matches) {
-                line.setAttribute("y1", r_point.top - 15);
+                line.setAttribute("y1", r_point.top - 175);
                 line.setAttribute("x2", r_popup.left + 300);
-                line.setAttribute("y2", r_popup.top + 45);
+                line.setAttribute("y2", r_popup.top - 50);
+            } else if (window.matchMedia('(max-width: 840px)').matches) {
+                line.setAttribute("y1", r_point.top - 120);
+                line.setAttribute("x2", r_popup.left + 300);
+                line.setAttribute("y2", r_popup.top - 10);      
             } else {
-                line.setAttribute("y1", r_point.top);
+                line.setAttribute("y1", r_point.top - 75);
                 line.setAttribute("x2", r_popup.left + 300);
-                line.setAttribute("y2", r_popup.top + 45);
+                line.setAttribute("y2", r_popup.top);
             }
 
         }
         // toggling visible class to display/hide line:
         line.classList.toggle("visible");
     };
+
+
     function disappear(e) {
         // get id number of "a_point" (last char in id):
         var id = e.id.charAt(e.id.length - 1);
@@ -110,10 +178,10 @@
         fixed_div.classList.remove("visible");
         var fixed_div = document.getElementById("wrap");
         fixed_div.classList.remove("visible");
-        var point_id = "point" + id;
+        var point_id = "a_point" + id;
         var point = document.getElementById(point_id);
         // turning on another img
-        point.setAttribute("src", "assets/images/point_wh.png");
+        point.style.backgroundImage = "url('assets/images/point_wh.png')";
     }
 
 
@@ -143,23 +211,28 @@
         }
     }
 
+    function move_photo(clicked_id) {
+        var slider = document.getElementById("slider");
+        var photo = document.getElementById("photo1");
 
-
-    function slide_photo(clicked_id) {
-        var slider = document.getElementById("slider")
+        photo_width = photo.offsetWidth;
         style = window.getComputedStyle(slider);
         matrix = style.getPropertyValue('transform');
+        //  for safari
+        if (matrix == null) {
+            matrix = style.getPropertyValue('-webkit-transform');
+        }
         var X_regexp = /(-?\d*?\.?\d*), 0\)$/;
         var X = matrix.match(X_regexp)[1];
-        console.log(X);
         X_int = parseInt(X, 10);
         // checking if clicked during transform:
         var X_regexp = /\d*[50][0]$|^0$/;
         var res = X_regexp.test(X_int);
-        console.log('cur' + X_int);
+        // console.log('cur' + X_int);
 
         clicked = document.getElementById(clicked_id);
         if (clicked.classList.contains('clicked')) {
+
             var double_click = true;
             clicked.classList.remove("clicked");
         } else {
@@ -168,61 +241,39 @@
             for (var i = 0; i <= 1; i += 1) {
                 arrows[i].classList.remove("clicked");
             }
-            // setting  now clicked elem:
+            // setting now clicked elem:
             clicked.classList.add("clicked");
         }
-
-        if (clicked_id === "left_arrow") {
-            // if clicked during transform:
-            if (res === false) {
-                // if double click and we are at the begining
-                // shift twice
-                if (double_click) {
-                    // checking X int:
-                    if (X_int < 150 && X_int > 0) {
-                        X_int = 150;
-                    } else if (X_int > 150) {
-                        X_int = 300;
-                    } else {
-                        X_int = 0;
-                    }
-                    new_X = X_int - 300;
-                    // alert("ust"+new_X);
-                }
-                //return to the place (deny trans)
-                else {
-                    new_X = 0;
-                }
-            } else {
-                new_X = X_int - 150;
-            }
-        } else {
-            // if clicked during transform:
-            if (res === false) {
-                // if double click and we are at the begining
-                // shift twice
-                if (double_click) {
-                    // checking X int:
-                    if (X_int > -150 && X_int < 0) {
-                        X_int = -150;
-                    } else if (X_int < -150) {
-                        X_int = -300;
-                    } else {
-                        X_int = 0;
-                    }
-                    new_X = X_int + 300;
-
-                }
-                //return to the place (deny trans)
-                else {
-                    new_X = 0;
-                }
-            } else {
-                new_X = X_int + 150;
-            }
+        // deny ckicking while transform:
+        // console.log(X_int-photo_width-4);
+        if (( (X_int % (-photo_width-4)) != 0) | (X_int == -8*(photo_width+4) && clicked_id === "right_arrow") | (X_int==0 && clicked_id === "left_arrow")){
+            return
         }
-        console.log(new_X);
-        slider.style.transform = "matrix(1, 0, 0, 1, " + new_X + ", 0)"
+        //turn pinky off pinky class
+        parent = document.getElementById('slider_nav');
+        children = parent.children;
+        for (var i = 0; i < children.length; i++) {
+            children[i].classList.remove('pinky');
+        }
+        if (clicked_id === "right_arrow") {
+            new_X = X_int-photo_width-4;
+            // turning sl_el (navslider)
+            sl_el_id = 1+(X_int / (-photo_width-4));
+        }
+        //clicked right arrow:
+        else {
+            new_X = X_int+photo_width+4;
+            // turning sl_el (navslider)
+            sl_el_id = (X_int / (-photo_width-4))-1;
+        }
+        // console.log(sl_el_id);
+        sl_el = document.getElementById('sl_el'+sl_el_id);
+        sl_el.classList.add("pinky");
+        sl_el = document.getElementById('sl_el'+sl_el_id);
+
+        sl_el.classList.add("pinky");
+        // console.log('new_X '+new_X);
+        slider.style.transform = "matrix(1, 0, 0, 1, " + new_X + ", 0)";
     }
 
 
@@ -231,12 +282,11 @@
     var photosCount = photos.length;
     for (var i = 0; i <= photosCount; i += 1) {
         photos[i].onclick = function(e) {
-
             // getting bigger to display
             var bigger = document.getElementById("bigger_photo");
             console.log(bigger);
             // set big pic
-            var url = "assets/images/" + this.id + ".png";
+            var url = "assets/images/4slider/" + this.id + ".jpg";
             console.log(url);
             bigger.setAttribute("src", url);
             // toggling visible class:
@@ -247,13 +297,13 @@
     function switchRoom(clicked_id) {
         // Clicking room - photo
         var room = document.getElementById(clicked_id);
-        console.log(room);
+        // console.log(room);
         // getting bigger to display
         var bigger = document.getElementById("bigger_photo_2");
-        console.log(bigger);
+        // console.log(bigger);
         // set big pic
         var url = "assets/images/" + clicked_id + ".png";
-        console.log(url);
+        // console.log(url);
         bigger.setAttribute("src", url);
         // toggling visible class:
         bigger.classList.add("visible");

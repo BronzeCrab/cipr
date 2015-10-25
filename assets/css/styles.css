@@ -39,11 +39,13 @@ body {
 
 /*=== Header intro ===*/
 header {
+
     background-position: center;
     background-image: url(../images/top_video.png);
     background-repeat: no-repeat;
     background-size: cover;
     height:650px;
+
 }
 .logo_img {
     display: block;
@@ -120,7 +122,7 @@ header {
     margin-right: auto;
     width: 100%;
     height: 1151px;
-    background-position: center;
+    background-position: center top;
     background-image: url(../images/island.png);
     background-repeat: no-repeat;
     position: relative;
@@ -141,11 +143,15 @@ header {
 }
 .a_point {
     position: absolute;
+    background-image:url("../images/point_wh.png");
+    width: 20px;
+    height: 20px;
 }
 #a_point1 {
     top: 35%;
     left: 90%;
 
+    
 }
 #a_point2 {
     top: 30%;
@@ -175,7 +181,7 @@ header {
 }
 #a_point8 {
     top: 70%;
-    left: 15%;
+    left: 7%;
 }
 #a_point9 {
     top: 40%;
@@ -198,7 +204,6 @@ header {
     position: absolute;
     display: none;
     width: 300px;
-    height: 100px;
     background-color: #fc8985;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -206,8 +211,24 @@ header {
     -ms-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
+    text-align: left;
+    color: white;
+}
+.popup h4 {
+    font-family: "tt_masters_demo_blackregular";
+    font-size: 16px;
+    margin-left: 1em;
+    margin-bottom: 0;
 }
 
+
+.popup p {
+    font-family: "Tahoma";
+    font-size: 14px;
+    margin-left: 1em;
+    margin-right: 1em;
+
+}
 #popup1 {
     top: 300px;
     left: 50%;
@@ -250,24 +271,31 @@ header {
 }
 .line {
     display: none;
+    z-index: 1;
 }
 #wrap {
     display: none;
-    background-color: #49c5db;
-    height:125px;
-
+    height: 420px;
+    margin-top: -100px;
+    background:-moz-linear-gradient(left,  #e16663 15%,#fc8985 30%,#fc8985 70%,#e16663 85%);
+    background: linear-gradient(left,  #e16663 15%,#fc8985 30%,#fc8985 70%,#e16663 85%);
+    background:-webkit-gradient(left,  #e16663 15%,#fc8985 30%,#fc8985 70%,#e16663 85%);
+    background:-webkit-linear-gradient(left,  #e16663 15%,#fc8985 30%,#fc8985 70%,#e16663 85%);
+    background:-o-linear-gradient(left,  #e16663 15%,#fc8985 30%,#fc8985 70%,#e16663 85%);
+    background:-ms-linear-gradient(left,  #e16663 15%,#fc8985 30%,#fc8985 70%,#e16663 85%);
+    z-index: 2;
 }
 #div_under_map {
     display: none;
     position: absolute;
     background-color: #fc8985;
-    width: 64%;
-    height: 130px;
+    width: 70%;
+    height: 170px;
     right:0;
     left:0;
     margin-left:auto;
     margin-right: auto;
-    top: 750px;
+    top: 840px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
@@ -278,7 +306,7 @@ header {
 #fixed_div {
     display: none;
     width: 80%;
-    height:100%;
+    height: 200px;
     margin: 0 auto;
     background-color: #fc8985;
     -webkit-border-radius: 10px;
@@ -287,6 +315,8 @@ header {
     -ms-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 .visible {
     display: block !important;
@@ -432,8 +462,9 @@ header {
     overflow: hidden;
     width: 460px;
     height: 205px;
-    border: solid white 1px;
+/*    border: solid white 1px;*/
     margin-top: 35px;
+    margin-left: 5px;
 }
 .overflow_visible {
     overflow: visible;
@@ -454,23 +485,36 @@ header {
 .photo_visible {
     display: none;
 }
+
+
 #slider {
-    width: 460px;
+    width: 1375px;
     height: 205px;
-    transition: all 2s ease-in-out;
-    -webkit-transition: all 2s ease-in-out; /** Chrome & Safari **/
-    -moz-transition: all 2s ease-in-out; /** Firefox **/
-    -o-transition: all 2s ease-in-out; /** Opera **/
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 1s ease-in-out; /** Firefox **/
+    -o-transition: all 1s ease-in-out; /** Opera **/
     -moz-transform:    translateX(0);
      -o-transform:      translateX(0);
      -webkit-transform: translateX(0);
      transform:         translateX(0);
 }
-
+.slider_nav {
+  margin-top: 5px;
+}
+.slider_nav_el {
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: white;
+    display: inline-block;
+}
 .bigger {
     position: absolute;
     top: 1500px;
-    width: 80%;
+    width: 40%;
     height: 90%; 
     z-index: 9005;
     left:0;
@@ -507,8 +551,6 @@ header {
 .our_team {
     width: 100%;
     text-align: center;
-
-    padding-top:5%;
     height: 1300px;
 }
 .our_team h1 {
@@ -654,7 +696,9 @@ header {
     margin-right: auto;
 }
 .video_review {
-    background-color: #fc8985;
+    background-image: url(../images/review_back.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     height: 500px;
     width: 720px;
     margin: 0 auto;
@@ -695,6 +739,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-top: 50px;
 }
 /*.ins_pr_wr {
     margin-bottom: 0;
@@ -711,9 +756,6 @@ header {
 }
 .park_beach {
     width: 100%;
-    background-color: #ffffff;
-    background-image: url(../images/hotel.png);
-    background-repeat: no-repeat; 
     margin-left: auto;
     margin-right: auto;
     -webkit-border-radius: 10px;
@@ -722,13 +764,28 @@ header {
     -ms-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+21,eaeaea+100 */
+background: #ffffff; /* Old browsers */
+background:url(../images/hotel.png) left no-repeat, -moz-linear-gradient(top,  #ffffff 21%, #eaeaea 100%); /* FF3.6+ */
+background:url(../images/hotel.png) left no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(21%,#ffffff), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+background:url(../images/hotel.png) left no-repeat, -webkit-linear-gradient(top,  #ffffff 21%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+background:url(../images/hotel.png) left no-repeat, -o-linear-gradient(top,  #ffffff 21%,#eaeaea 100%); /* Opera 11.10+ */
+background:url(../images/hotel.png) left no-repeat, -ms-linear-gradient(top,  #ffffff 21%,#eaeaea 100%); /* IE10+ */
+background:url(../images/hotel.png) left no-repeat, linear-gradient(to bottom,  #ffffff 21%,#eaeaea 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+background-size: 45% 100%;
 }
+
 .blue {
         color: #0c7da5;
 }
 .park_txt {
+
     text-align: left;
-    margin-left: 50%;
+    margin-left: 55%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 100px;
 }
 .park_txt > h2 {
 
@@ -746,13 +803,16 @@ header {
     font-size: 12px;
     font-family: "Tahoma";
     width: 1220px;
-    height: 205px;
+/*    height: 205px;*/
 }
-
+hr {
+    border-color:#f2f2f2;
+    opacity: 0.4;
+}
 .hotel_p {
-    padding-top: 80px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .hotel_img {
     float: right;
@@ -765,15 +825,15 @@ header {
     font-size: 12px;
     font-family: "Tahoma";
     width: 1220px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 
 }
 .beach_p {
     padding-top: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-bottom:50px;
 }
 .beach_img {
@@ -782,6 +842,7 @@ header {
 }
 .photo_line {
     display: inline-block;
+    margin-top: 60px;
 }
 .room {
     width: 210px;
@@ -801,7 +862,7 @@ header {
 }
 .bigger_2 {
     position: absolute;
-    top: 4000px;
+    top: 1450px;
     width: 500px;
     height: 300px; 
     z-index: 9005;
@@ -837,11 +898,22 @@ header {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+21,eaeaea+100 */
+background: #ffffff; /* Old browsers */
+background:-moz-linear-gradient(top,  #ffffff 21%, #eaeaea 100%); /* FF3.6+ */
+background:-webkit-gradient(linear, left top, left bottom, color-stop(21%,#ffffff), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+background:-webkit-linear-gradient(top,  #ffffff 21%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+background:-o-linear-gradient(top,  #ffffff 21%,#eaeaea 100%); /* Opera 11.10+ */
+background:-ms-linear-gradient(top,  #ffffff 21%,#eaeaea 100%); /* IE10+ */
+background:linear-gradient(to bottom,  #ffffff 21%,#eaeaea 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+
 }
 .room_p {
     margin-left: 40px;
     margin-right: 150px;
     text-align: left;
+    padding-top: 50px;
 }
 .room_img_div {
     height: 220px;
@@ -923,6 +995,7 @@ header {
     -o-border-radius: 10px;
     -ms-border-radius: 10px;
     -khtml-border-radius: 10px;
+    margin-top: 50px;
     border-radius: 10px;
     border: 3px solid #119398;
     display: -webkit-box;
@@ -1368,7 +1441,7 @@ footer {
     }
     #photo_arrow_right {
         width: 3%;
-        margin-left: 1%;
+        margin-left: 2%;
     }
     .request {
         width: 40%;
@@ -1379,8 +1452,19 @@ footer {
         width: 700px;
         height: 350px;
     }
+    #circle_2,
+    #circle_3,
+    #circle_4 {
+        margin-left: 8%;
+    }
+    #circle_2_att,
+    #circle_3_att,
+    #circle_4_att{
+        margin-left: 9%;
+    }
 }
 @media screen and (max-width:840px) {
+
     .txt_after_logo {
         width: 55%;
         margin-left: 0;
@@ -1395,18 +1479,16 @@ footer {
         width: 45%;
     }
     .photo_wrapper {
-        width: 87%;
+        width: 85%;
 
     }
-    .photo {
-        width: 140px;
-    }
-    #slider {
-        width: 470px;
+    .price {
+        margin-top: 0;
     }
     .bigger {
-     top: 1000px;
-     height:70%;
+        top: 1200px;
+        height: 40%;
+        width: 400px;
     }
     .bigger2 {
      top: 2000px;
@@ -1424,7 +1506,17 @@ footer {
         top:50%;
         left:-50%;
     }*/
-   
+   .reviews .video_review > h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+   }
+   .video_review {
+    height: auto;
+   }
+   .video2 {
+        width:90%;
+        height: 370px;
+   }
     .our_team {
         height: 1300px;
     }
@@ -1458,7 +1550,7 @@ footer {
     .circle_wrap2 {
         margin-top: 35%; 
     }
-/*    #circle_2,
+    /*#circle_2,
     #circle_3,
     #circle_4 {
         margin-left: 5%;
@@ -1474,15 +1566,23 @@ footer {
     }
     .park_beach {
         background-position: center top;
-        background-size: 100% 45%;
+        background-size: 100% 50%;
+
     }
     .park_txt {
         margin-left: 0;
-        padding-top: 70%;
-        width: 100%;
+        padding-top: 50%;
+        width: 85%;
         height: 50%;
+        margin-left: 5%;
 
     }
+    .park_txt > h2 {
+        margin-top: 50px;
+    }
+/*    .park_txt > p {
+        padding-bottom: 50px;
+    }*/
     .room_p {
         display: block;
     }
@@ -1494,7 +1594,6 @@ footer {
     .value {
         font-size: 40px;
     }
-
     .organizer {
         width: 45%;
         height: 300px;
@@ -1502,6 +1601,7 @@ footer {
     .island {
         height: 616px;
         background-image: url(../images/840_island.png);
+        margin-top: -250px;
     }
     .room_details {
         flex-direction: column;
@@ -1524,21 +1624,19 @@ footer {
         height: 300px;
     }
 }
-
-@media screen and (max-width:635px) {
-    .video {
-        width: 75%;
-        display: block;
-        margin: 0 auto;
-    }
-    .photo {
-        width: 140px;
-    }
+@media screen and (max-width:722px) {
     .photo_arrows {
         width: 80%;
         display: block;
         margin: 0 auto;
         margin-top: 40px;
+    }
+}
+@media screen and (max-width:635px) {
+    .video {
+        width: 75%;
+        display: block;
+        margin: 0 auto;
     }
     #right  {
         display: inline-block;
@@ -1614,10 +1712,22 @@ footer {
         width: 450px;
         height: 225px;
     }
+    #slider_nav {
+        text-align: center;
+    }
+    .bigger {
+        top: 1500px;
+        height: 40%;
+        width: 400px;
+    }
 }
 
 @media screen and (max-width:533px) {
+    .park_beach {
 
+    background-color: #eaeaea;
+ 
+    }
     .left_wreath, 
     .right_wreath {
         vertical-align: bottom;
@@ -1646,57 +1756,66 @@ footer {
         width: 400px;
         height: 200px;
     }
-}
-
-@media screen and (max-width:480px) {
+    .island {
+        background-image:url(../images/480_island.png);
+        margin-top: -200px;
+    }
     #a_point1 {
-        top: 10%;
+        top: 45%;
         left: 90%;
     }
     #a_point2 {
         top: 20%;
-        left: 80%;
-       
+        left: 80%; 
     }
     #a_point3 {
         top: 40%;
-        left: 65%;
+        left: 75%;
     }
     #a_point4 {
-        top: 65%;
+        top: 35%;
         left: 55%;
-
-        
     }
     #a_point5 {
-        top: 50%;
+        top: 47%;
         left: 45%;
     }
     #a_point6 {
-        top: 62%;
-        left: 37%;
-       
+        top: 32%;
+        left: 37%;   
     }
     #a_point7 {
-        top: 60%;
+        top: 50%;
         left: 7%;
-   
-        
     }
     #a_point8 {
-        top: 76%;
+        top: 36%;
         left: 15%;
-     
     }
     #a_point9 {
-        top: 35%;
-        left: 15%;
-  
+        top: 65%;
+        left: 10%;
     }
     #a_point0 {
-        /*border:2px solid green;*/
-        top: 10%;
+        top: 50%;
         left: 30%;
+    }
+
+    .bigger {
+        top: 1500px;
+        height: 40%;
+        width: 400px;
+    }
+    .park_txt {
+        padding-top: 50%;
+
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .park_txt {
+        padding-top: 450px;
     }
     #div_under_map {
         width: 64%;
@@ -1704,7 +1823,6 @@ footer {
         top: 690px;
 
     }
-
     #right  {
         display: none;
     }
@@ -1712,19 +1830,22 @@ footer {
         left: 45%;
     }
     .photo_wrapper {
-        width:85%;
+        width:84%;
     }
     .photo_arrows {
         width: 90%;
+        margin-left:auto;
+        margin-right:auto;
     }
     #slider {
-        width:150%;
+        width:1190px;
     }
     .photo {
-        width: 30%;
+        width: 120px;
     }
     .bigger {
-        height:50%;
+        height: 40%;
+        width: 95%;
     }
     .our_team {
         height: 1500px;
@@ -1770,17 +1891,18 @@ footer {
         margin-top: 50px;
     }
   
-    .island {
-        background-image:url(../images/480_island.png);
-    }
+
     #popUpDiv2,
     #popUpDiv1 {
         width: 350px;
         height: 200px;
     }
-
+    .bigger {
+        top: 1500px;
+    }
 }
 @media screen and (max-width:410px) {
+
     .our_team {
         height: 1900px;
     }
@@ -1806,7 +1928,7 @@ footer {
         position: absolute;
     }
     .circle_wrapper {
-        margin-top: 400px;
+        margin-top: 350px;
     }
     .circle_wrap2 {
         margin-top: 200px;
@@ -1819,6 +1941,7 @@ footer {
     }
     .video_review {
         width: 100%;
+        margin-top: 50px;
     }
     .room_img_div {
         width: 90%;
@@ -1844,6 +1967,13 @@ footer {
         width: 300px;
         height: 200px;
     }
+    .island {
+        margin-top: -150px;
+    }
+    .bigger {
+        top: 1450px;
+    }
+
 }
 @media screen and (max-width:342px) {
     .left_wreath, 
@@ -1862,5 +1992,27 @@ footer {
     .value{
         font-size: 20px;
     }
+    .video_photo {
+        margin-top: -140px;
+    }
+    #popUpDiv2,
+    #popUpDiv1 {
+        width: 250px;
+        height: 200px;
+    }
+    .exit {
+        top: -125%;
+        right: -54%;
+    }
+    .bigger {
+        top: 1450px;
+    }
+    .photo_arrows {
+        margin-left:8px;
+        margin-right: 0;
+    }
 }
 
+.pinky {
+    background-color: #a55653;
+}
