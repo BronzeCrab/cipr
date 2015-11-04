@@ -798,6 +798,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     border-radius: 10px;
     height: 299px;
     background-image: url(../images/hotel.png);
+    background-size: cover;
     width:400px;
     display: inline-block;
     margin-left:0;
