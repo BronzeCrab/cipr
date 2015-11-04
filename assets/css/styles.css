@@ -1773,6 +1773,10 @@ footer {
     .park_txt > h2 {
         margin-top: 50px;
     }
+    .exit {
+        top: -125%;
+        right: -54%;
+    }
 }
 
 @media screen and (max-width:533px) {
@@ -2052,10 +2056,6 @@ footer {
     #popUpDiv1 {
         width: 250px;
         height: 200px;
-    }
-    .exit {
-        top: -125%;
-        right: -54%;
     }
     .bigger {
         top: 1450px;
