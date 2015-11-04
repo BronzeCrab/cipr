@@ -47,11 +47,7 @@ header {
     height:650px;
 
 }
-.page-wrapper {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .logo_img {
     display: block;
     margin: 0 auto;
@@ -1957,6 +1953,9 @@ footer {
     }
     .bigger_2 {
         top: 2400px;
+    }
+    .hotel_img_1 {
+    	width: 100%;
     }
 }
 @media screen and (max-width:410px) {
